@@ -23,7 +23,7 @@ h3 {
 	display: inline-block;
 	border: 1px solid grey;
 }
-.activated-note {
+.activated {
 	background-color: lightgray;
 }
 .boxes {
