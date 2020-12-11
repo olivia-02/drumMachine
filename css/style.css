@@ -1,0 +1,33 @@
+body {
+	background-color: #1f1f1f;
+	color: darkgrey;
+	font-family: 'Oswald', sans-serif;
+}
+.grid {
+	display: grid;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	grid-template-columns: 1fr;
+	width: 80%;
+	margin: auto;
+}
+.grid > div {
+	height: 8vh;
+	border: 1px solid white;
+}
+h3 {
+	margin: 0px 15px;
+	display: inline;
+}
+.open-note {
+	display: inline-block;
+	border: 1px solid grey;
+}
+.activated-note {
+	background-color: lightgray;
+}
+.boxes {
+	display: grid;
+	grid-template-columns: repeat(9, 11%);
+	width: 100%;
+}
