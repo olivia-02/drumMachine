@@ -63,7 +63,7 @@ function loop(inst, index){
 			index = 0
 		}
 		//BPM 
-	}, 200)
+	}, 300)
 }
 
 //Pass all instruments through loop function, 
