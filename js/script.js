@@ -1,42 +1,45 @@
 debugger
 
 let kicks = document.querySelectorAll(`#kick`)
-var index = 0;
+let snares = document.querySelectorAll(`#snare`)
+let nicecow = document.querySelectorAll(`#cowbell`)
 
 
 function clickable(event) {
 	var clicked = event.target;
 	if (clicked.classList.contains(`activated`)) {
-		this.classList.remove(`activated`)
+		clicked.classList.remove(`activated`)
 	} else {
 		clicked.classList.add(`activated`);
 	}
 	};
 
-setInterval(function(){
-	console.log(kicks[index]);
-	kicks[index].setAttribute("style", "background-color: red;")
-	if (index >= 1){
-		kicks[index-1].style.backgroundColor = null;
-	} else {
-		kicks[7].style.backgroundColor = null;
-	}
-	if (kicks[index].classList.contains(`activated`)){
-		var kicksound = document.createElement('audio');
-  		kicksound.src = `/sounds/CYCdh_KesKick-08.wav`;
-  		document.body.appendChild(kicksound);
-  		kicksound.play();
-  		kicksound.onended = function () {
-    	this.parentNode.removeChild(this);
-  		}
-	}
-	index++;
-	console.log(index);
-	if (index === kicks.length){
-		index = 0;
-	};
-}, 500)
+function loop(inst, index){
 
-function boysen(){
-	
+	setInterval(function(){
+		inst[index].setAttribute("style", "background-color: red;")
+		if (index >= 1){
+			inst[index-1].style.backgroundColor = null;
+		} else {
+			inst[7].style.backgroundColor = null;
+		}
+		if (inst[index].classList.contains(`activated`)){
+			var instound = document.createElement('audio');
+			  instound.src = `/sounds/` + inst[index].id + `.wav`;
+			  document.body.appendChild(instound);
+			  instound.play();
+			  instound.onended = function () {
+			this.parentNode.removeChild(this);
+			  }
+		}
+		index++;
+		if (index === inst.length){
+			index = 0;
+		};
+	}, 200)
+
 }
+
+loop(nicecow, 0)
+loop(snares, 0)
+loop(kicks, 0)
