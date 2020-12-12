@@ -10,6 +10,17 @@ let claves = document.querySelectorAll(`#claves`)
 let highbongos = document.querySelectorAll(`#hibongo`)
 let lowbongos = document.querySelectorAll(`#lobongo`)
 let congas = document.querySelectorAll(`#conga`)
+let notes = document.querySelectorAll(`.open-note`)
+let btn = document.querySelector(`button`)
+
+btn.addEventListener(`click`, function(){
+	let i = 0;
+	while (i < notes.length){
+		notes[i].classList.remove(`activated`);
+		console.log(notes[i]);
+		i++
+	}
+})
 
 function clickable(event) {
 	var clicked = event.target;
@@ -19,6 +30,7 @@ function clickable(event) {
 		clicked.classList.add(`activated`);
 	}
 	};
+
 
 function loop(inst, index){
 
