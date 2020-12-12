@@ -1,9 +1,15 @@
-debugger
+//debugger
 
 let kicks = document.querySelectorAll(`#kick`)
 let snares = document.querySelectorAll(`#snare`)
 let nicecow = document.querySelectorAll(`#cowbell`)
-
+let openhats = document.querySelectorAll(`#openhat`)
+let pedhats = document.querySelectorAll(`#pedhat`)
+let closedhats = document.querySelectorAll(`#closedhat`)
+let claves = document.querySelectorAll(`#claves`)
+let highbongos = document.querySelectorAll(`#hibongo`)
+let lowbongos = document.querySelectorAll(`#lobongo`)
+let congas = document.querySelectorAll(`#conga`)
 
 function clickable(event) {
 	var clicked = event.target;
@@ -43,3 +49,10 @@ function loop(inst, index){
 loop(nicecow, 0)
 loop(snares, 0)
 loop(kicks, 0)
+loop(openhats, 0)
+loop(closedhats, 0)
+loop(pedhats, 0)
+loop(claves, 0)
+loop(highbongos, 0)
+loop(lowbongos, 0)
+loop(congas, 0)
