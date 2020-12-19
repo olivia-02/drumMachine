@@ -50,7 +50,7 @@ function loop(inst, index){
 		if (inst[index].classList.contains(`activated`)){
 			//Since there can be frequent repeatition, document must make duplicates of audio to play overlapping each other.
 			var instound = document.createElement('audio')
-			  instound.src = `/audio/` + inst[index].id + `.wav`;
+			  instound.src = `audio/` + inst[index].id + `.wav`;
 			  document.body.appendChild(instound)
 			  instound.play()
 			  instound.onended = function () {
